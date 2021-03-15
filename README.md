@@ -4,7 +4,7 @@ These are my dotfiles for settings up my macOS from scratch.
 
 ## Requirements
 
-- Clean install of macOS Catalina
+- Clean install of macOS Big Sur
 - Logged in with Apple ID
 
 ## Setting up your Mac
@@ -12,17 +12,17 @@ These are my dotfiles for settings up my macOS from scratch.
 ### Oneliner
 
 ```
-$ sh -c "$(curl -fsSL https://git.io/JvrDa)"
+$ sh -c "$(curl -fsSL https://git.io/JqdQW)"
 ```
 
-Source: https://raw.githubusercontent.com/back-2-95/dotfiles/master/install.sh
+Source: https://raw.githubusercontent.com/yz4898/dotfiles/master/install.sh
 
 ### Manually
 
 Clone this repository to `~/dotfiles`:
 
 ```
-$ git clone https://github.com/back-2-95/dotfiles.git ~/dotfiles
+$ git clone https://github.com/yz4898/dotfiles.git ~/dotfiles
 ```
 
 Start the setup:
@@ -48,37 +48,19 @@ Alternatively you could utilize encryption: https://abdullah.today/encrypted-dot
 - Oh My Zsh
 - Brewfile
   - Ansible
-  - DDEV local
   - Docker Desktop
-  - doctl
   - Firefox
   - Google Chrome
   - HTTPie
   - iTerm2
-  - KeepingYouAwake
-  - Lagoon CLI
-  - LastPass CLI
-  - Mac App Store manager
   - Mackup
-  - mkcert and nss
-  - Monosnap
-  - MySQL
-  - NVM
-  - OpenShift CLI
-  - PHPStorm
   - Rectangle
   - Slack
-  - Sublime Text 3
   - Terraform
-  - Transmission
-  - Tunnelblick
-  - VLC
-  - VyprVPN
-
+  -- Others, etc.
+  
 ## TODO
 
-- Install Composer and hirak/prestissimo
-- Clone Stonehenge
 
 ## Thanks to...
 
