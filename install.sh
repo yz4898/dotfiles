@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DOTFILES_FOLDER=$HOME/dotfiles
-DOTFILES_URL=https://github.com/back-2-95/dotfiles.git
+DOTFILES_URL=https://github.com/yz4898/dotfiles.git
 DOTFILES_BRANCH=master
 
 # Colors
@@ -58,7 +58,7 @@ fi
 cd "$DOTFILES_FOLDER" || exit 1
 
 # Include .env
-source .env
+#source .env
 
 # Install all our dependencies with bundle (See Brewfile)
 step "Installing Homebrew Bundle ..."
