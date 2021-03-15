@@ -3,6 +3,7 @@
 DOTFILES_FOLDER=$HOME/dotfiles
 DOTFILES_URL=https://github.com/yz4898/dotfiles.git
 DOTFILES_BRANCH=master
+PROJECTS_FOLDER=~/Projects
 
 # Colors
 NO_COLOR="\033[0m"
