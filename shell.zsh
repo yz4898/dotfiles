@@ -1,2 +1,2 @@
-# cd to ~/druid folder
-druid
+# cd to ~/Projects folder
+Projects
