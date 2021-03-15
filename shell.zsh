@@ -1,2 +1,2 @@
 # cd to ~/Projects folder
-Projects
+cd ~/Projects
