@@ -29,20 +29,12 @@ else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-# Check for Oh My Zsh and install if we don't have it
+## Check for Oh My Zsh and install if we don't have it
 step "Installing Oh My Zsh ..."
 if [ -d "$HOME/.oh-my-zsh" ]; then
   printf "Oh My Zsh is already installed\n"
 else
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-fi
-
-# Check for Powerlevel10k and install if we don't have it
-step "Installing Powerlevel10k ..."
-if [ -d "$DOTFILES_FOLDER/themes/powerlevel10k" ]; then
-  printf "Powerlevel10k is already installed\n"
-else
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$DOTFILES_FOLDER"/themes/powerlevel10k
 fi
 
 # Clone this repository locally if does not exist
@@ -54,11 +46,19 @@ else
     git clone -b $DOTFILES_BRANCH $DOTFILES_URL $DOTFILES_FOLDER
 fi
 
+# Check for Powerlevel10k and install if we don't have it
+step "Installing Powerlevel10k ..."
+if [ -d "$DOTFILES_FOLDER/themes/powerlevel10k" ]; then
+  printf "Powerlevel10k is already installed\n"
+else
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$DOTFILES_FOLDER"/themes/powerlevel10k
+fi
+
 # Move to repo folder
 cd "$DOTFILES_FOLDER" || exit 1
 
 # Include .env
-#source .env
+source .env
 
 # Install all our dependencies with bundle (See Brewfile)
 step "Installing Homebrew Bundle ..."
@@ -79,9 +79,6 @@ ln -sfn $DOTFILES_FOLDER/.gitconfig $HOME/.gitconfig
 # Symlink the Mackup config file to the home directory
 step "Symlink .mackup.cfg to $HOME/.mackup.cfg"
 ln -sfn $DOTFILES_FOLDER/.mackup.cfg $HOME/.mackup.cfg
-
-step "Install latest LTS node"
-nvm install --lts
 
 step "Create projects folder $PROJECTS_FOLDER ..."
 if [ -d "$PROJECTS_FOLDER" ]; then
