@@ -47,7 +47,7 @@ cask 'rectangle'                    # Move and resize windows in macOS using key
 cask 'screen'                       # Screen.so
 cask 'slack'                        # Slack chats
 cask 'wireshark'
-cask 'suspicious-packages'
+cask 'suspicious-package'
 cask 'alfred'
 cask 'appcleaner'
 cask 'cheatsheet'
