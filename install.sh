@@ -91,5 +91,5 @@ fi
 # Set macOS preferences
 # We will run this last because this will reload the shell
 # Comment out until checked with Big Sur
-#step "Set macOS preferences ..."
-#source .macos
+step "Set macOS preferences ..."
+source .macos

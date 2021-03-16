@@ -17,17 +17,17 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Mando"
-sudo scutil --set HostName "Mando"
+#sudo scutil --set ComputerName "Mando"
+#sudo scutil --set HostName "Mando"
 #sudo scutil --set LocalHostName "Mando"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Mando"
+#sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Mando"
 
 # Expand save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+#defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+#defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+#defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -35,26 +35,29 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
-
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
+# Dock Left
+defaults write com.apple.dock orientation left
+# Restart Dock
+killall Dock
 
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
 
-# Disable send and reply animations in Mail.app
-defaults write com.apple.mail DisableReplyAnimations -bool true
-defaults write com.apple.mail DisableSendAnimations -bool true
-
-# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-
-# Disable inline attachments (just show the icons)
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
-
-# Disable automatic spell checking
-defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
+## Disable send and reply animations in Mail.app
+#defaults write com.apple.mail DisableReplyAnimations -bool true
+#defaults write com.apple.mail DisableSendAnimations -bool true
+#
+## Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+#defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+#
+## Disable inline attachments (just show the icons)
+#defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+#
+## Disable automatic spell checking
+#defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
 ###############################################################################
 # DONE                                                                        #
