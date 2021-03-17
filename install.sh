@@ -72,6 +72,8 @@ step "Symlink .p10k.zsh to $HOME/.p10k.zsh"
 ln -sfn $DOTFILES_FOLDER/.p10k.zsh $HOME/.p10k.zsh
 
 step "Symlink .gitconfig to $HOME/.ssh/config"
+ssh-keygen -t rsa -b 4096 -C "misteryiz@gmail.com"
+eval "$(ssh-agent -s)"
 ln -sfn $DOTFILES_FOLDER/.ssh.config $HOME/.ssh/config
 
 step "Symlink .gitconfig to $HOME/.gitconfig"
